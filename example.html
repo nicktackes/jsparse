@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>JavaScript Packrat Parser Example 1</title>
+    <script type="text/javascript" src="jsparse.js"></script>
+    <script type="text/javascript" src="example4.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+    function process() {
+      var expr = document.getElementById("expr").value;
+      document.getElementById("result").innerHTML = Expr(ps(expr)).ast;
+    }
+    </script>
+    <p>A version that produces an AST instead of evaluates is <a href="index2.html">here</a>. More about the library is <a href="http://www.bluishcoder.co.nz/2007/10/javascript-packrat-parser.html">at my weblog post</a>. Source for this example is in <a href="http://www.double.co.nz/cgi-bin/gitweb.cgi?p=jsparse.git;a=blob;f=example3.js;h=a2912c163883595815d65581ef3807f9796723e0;hb=d6d8f6a756adaa34e0924236aeafca401c73b003">example3.js</a>.</p>
+    <form onsubmit="process(); return false;">
+      <table border="0">
+	<tr><td>Expression:</td><td><input type="text" id="expr" value="@{customerName}"></td></tr>
+	<tr><td>Result:</td><td><div id="result"></div></td></tr>
+	<tr><td colspan="2"><input type="submit" value="Parse"></td></tr>
+      </table>      
+    </form>
+  </body>
+</html>
+    
